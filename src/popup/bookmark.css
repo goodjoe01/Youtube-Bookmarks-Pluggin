@@ -1,0 +1,49 @@
+.bookmarks-contaier {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  background: rgba(45,54,73,1);
+  height: 30px;
+}
+.bookmarks-contaier__content {
+  flex: 2;
+  padding: 10px 5px; 
+}
+
+p {
+  font-weight: 400;
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  margin-right: 10px;
+  color: var(--font-color);
+}
+
+.bookmarks-contaier__buttons {
+  height: 100%;
+  display: flex;
+  background-color: #fff;
+} 
+
+.bookmarks-contaier__buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent; 
+}
+
+.delete-icon {
+  color: #941B10
+}
+.delete-icon :hover {
+  color: #CB2415 
+}
+
+.back-icon {
+  color:#386480
+}
+.back-icon :hover {
+  color:#457b9d
+}
