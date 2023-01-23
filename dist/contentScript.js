@@ -648,17 +648,32 @@ const getBookmarks = () => __awaiter(void 0, void 0, void 0, function* () {
     const bookmarks = data[currentVideo] ? JSON.parse(data[currentVideo]) : [];
     return bookmarks;
 });
+const checkIfBookmarkExist = (id) => __awaiter(void 0, void 0, void 0, function* () {
+    const currentBookmarks = yield getBookmarks();
+    console.log(currentBookmarks);
+    console.log('ID', id);
+    const exists = currentBookmarks.find((bookmark) => { bookmark.id === id; });
+    console.log('exists: ', exists);
+    if (exists)
+        return true;
+    else
+        return false;
+});
 const addBookmarkEventHandler = () => __awaiter(void 0, void 0, void 0, function* () {
     const currentVideoTime = youtubeVideo.currentTime;
-    const newBookmark = {
-        id: currentVideoTime.toString(),
-        title: 'Bookmark at ' + (0,_utils__WEBPACK_IMPORTED_MODULE_0__.getTime)(currentVideoTime),
-        time: currentVideoTime
-    };
-    chrome.storage.sync.set({
-        [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark].sort((a, b) => a.time - b.time))
-    });
-    currentVideoBookmarks = yield getBookmarks();
+    const existe = yield checkIfBookmarkExist(currentVideoTime.toString());
+    console.log('EXISTE EL BOOKMARK?: ', existe);
+    if (existe === false) {
+        const newBookmark = {
+            id: currentVideoTime.toString(),
+            title: 'Bookmark at ' + (0,_utils__WEBPACK_IMPORTED_MODULE_0__.getTime)(currentVideoTime),
+            time: currentVideoTime
+        };
+        chrome.storage.sync.set({
+            [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark])
+        });
+        currentVideoBookmarks = yield getBookmarks(); // 3
+    }
 });
 const newVideoLoaded = () => __awaiter(void 0, void 0, void 0, function* () {
     const bookmarkExists = document.querySelector('.bookmark-btn');

@@ -1,7 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { TBookmark } from '../content/types'
 import Bookmark from './Bookmark'
 import { getActiveTabURL } from '../content/utils'
+import ReactResizeDetector  , { useResizeDetector } from 'react-resize-detector';
+import {v4} from 'uuid'
+
 import './app.css'
 
 type props = {
@@ -10,31 +13,49 @@ type props = {
   setBookmarks: React.Dispatch<React.SetStateAction<TBookmark[]>>
 }
 
-const Bookmarks = ({bookmarks, setBookmarks, videoTitle}: props) => (
-  <>
-    <div className='bookmarks-app__title'>
-    <h1 className='bookmarks-app__title-h1'> {videoTitle} </h1>
-    </div>
-    <div className='bookmarks-app__content'>
-      { bookmarks.length>0?
-        (bookmarks.map((bookmark)=>(
-          <Bookmark key={bookmark.id} bookmark={bookmark} setBookmarks={setBookmarks} />
-        ))) :
-        (<div className='bookmarks-app__messages'>Add your bookmarks 📑😄. </div>)
-      }
-    </div>
-  </>
+const Bookmarks = ({bookmarks, setBookmarks, videoTitle}: props) =>{
+  const {width, height, ref} = useResizeDetector();
 
-)
+  const handleOnResize = () => {
+    const bookmarksContent = ref.current;    
+     if(bookmarksContent.clientHeight >= 190){
+      bookmarksContent.classList.add('small');
+    }
+    else{
+      bookmarksContent.classList.remove('small');
+    }
+  }
+
+  return (
+    <>
+      <div className='bookmarks-app__title'>
+      <h1 className='bookmarks-app__title-h1'> {videoTitle} </h1>
+      </div>
+      <ReactResizeDetector handleWidth={false} handleHeight onResize={handleOnResize}>
+      <div
+      ref={ref}
+      className='bookmarks-app__content'
+      >
+        { bookmarks.length>0?
+          (bookmarks.map((bookmark)=>(
+            <Bookmark key={v4()} bookmark={bookmark} setBookmarks={setBookmarks} />
+          ))) :
+          (<div className='bookmarks-app__messages'>Add your bookmarks 📑😄. </div>)
+        }
+      </div>
+      </ReactResizeDetector>
+    </>
+  )
+} 
 
 export const App = () => {
   const [bookmarks, setBookmarks] = useState<TBookmark[]>([]);
   const [isYoutube, setIsYoutube] = useState(true); 
+  
   const [title, setTitle] = useState('');
 
   const truncateTitle = (title: string) => {
     const length = 59;
-    title = title.substring(3, title.length)
     if (title.length > length) {
       return title.substring(0, length) + '...';
     }

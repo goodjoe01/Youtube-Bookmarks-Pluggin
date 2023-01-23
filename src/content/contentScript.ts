@@ -15,21 +15,35 @@ const getBookmarks = async () => {
   return bookmarks;
 }
 
+const checkIfBookmarkExist = async (id: string) => {
+  const currentBookmarks = await getBookmarks();
+  console.log(currentBookmarks);
+  console.log('ID', id)
+  const exists = currentBookmarks.find((bookmark)=>{bookmark.id===id});
+  console.log('exists: ', exists)
+  if(exists) return true
+  else return false;
+}
+
 const addBookmarkEventHandler = async () => {
   const currentVideoTime = youtubeVideo.currentTime;
+  const existe = await checkIfBookmarkExist(currentVideoTime.toString())
+  console.log('EXISTE EL BOOKMARK?: ', existe);
 
-  const newBookmark: TBookmark = {
-    id: currentVideoTime.toString(),
-    title: 'Bookmark at ' + getTime(currentVideoTime),
-    time: currentVideoTime
-  };
-    
-  chrome.storage.sync.set({
-    [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark].sort((a,b) => a.time - b.time ))
-  });
+  if (existe===false){
+    const newBookmark: TBookmark = {
+      id: currentVideoTime.toString(),
+      title: 'Bookmark at ' + getTime(currentVideoTime),
+      time: currentVideoTime
+    };
+      
+    chrome.storage.sync.set({
+      [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark])
+    });
+
+    currentVideoBookmarks = await getBookmarks(); // 3
+  } 
   
-  currentVideoBookmarks = await getBookmarks();
-
 }
 
 const newVideoLoaded = async () => {

@@ -1,7 +1,10 @@
 .bookmarks-contaier {
   display: flex;
   align-items: center;
-  margin: 5px 0;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-left: 0;
   background: rgba(45,54,73,1);
   height: 30px;
 }
@@ -21,7 +24,7 @@ p {
 .bookmarks-contaier__buttons {
   height: 100%;
   display: flex;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, .9);
 } 
 
 .bookmarks-contaier__buttons button {

@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  box-sizing: border-box;\r\n  padding: 0;\r\n  margin: 0;\r\n  scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n  background: var(--color-bg);\r\n  width: 300px;\r\n  height: 100%;\r\n}\r\n\r\n.bookmarks-app {\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 10px 10px;\r\n}\r\n\r\n.bookmarks-app__content {\r\n  max-height: 190px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.bookmarks-app__messages {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.8rem;\r\n  padding: 5px 15px;\r\n  margin-top: 5px;\r\n  background: rgba(45,54,73,1);\r\n}\r\n\r\n.bookmarks-app__title {\r\n  display: flex;\r\n}\r\n\r\n.bookmarks-app__title-h1 {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.9rem;\r\n}", "",{"version":3,"sources":["webpack://./src/popup/app.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;EACT,uBAAuB;AACzB;;AAEA;EACE,2BAA2B;EAC3B,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,+BAA+B;EAC/B,gBAAgB;EAChB,WAAW;EACX,iBAAiB;EACjB,iBAAiB;EACjB,eAAe;EACf,4BAA4B;AAC9B;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,+BAA+B;EAC/B,gBAAgB;EAChB,WAAW;EACX,iBAAiB;AACnB","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  padding: 0;\r\n  margin: 0;\r\n  scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n  background: var(--color-bg);\r\n  width: 300px;\r\n  height: 100%;\r\n}\r\n\r\n.bookmarks-app {\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 10px 10px;\r\n}\r\n\r\n.bookmarks-app__content {\r\n  max-height: 190px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.bookmarks-app__messages {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.8rem;\r\n  padding: 5px 15px;\r\n  margin-top: 5px;\r\n  background: rgba(45,54,73,1);\r\n}\r\n\r\n.bookmarks-app__title {\r\n  display: flex;\r\n}\r\n\r\n.bookmarks-app__title-h1 {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.9rem;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  box-sizing: border-box;\r\n  padding: 0;\r\n  margin: 0;\r\n  scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n  background: var(--color-bg);\r\n  width: 300px;\r\n  height: 100%;\r\n}\r\n\r\n.bookmarks-app {\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 10px 10px;\r\n}\r\n\r\n.bookmarks-app__content {\r\n  \r\n  display: flex;\r\n  flex-direction: column;\r\n  overflow-y: hidden;\r\n  /* overflow-y: scroll; */\r\n  margin-top: 5px;\r\n}\r\n\r\n.small {\r\n  overflow-y: scroll;\r\n  max-height: 190px;\r\n}\r\n\r\n.bookmarks-app__messages {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.8rem;\r\n  padding: 5px 15px;\r\n  margin-top: 5px;\r\n  background: rgba(45,54,73,1);\r\n}\r\n\r\n.bookmarks-app__title {\r\n  display: flex;\r\n}\r\n\r\n.bookmarks-app__title-h1 {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  width: 0.8em;\r\n}\r\n \r\n::-webkit-scrollbar-track {\r\n  border-radius: 5px;\r\n}\r\n::-webkit-scrollbar-thumb {\r\n  background: rgba(255, 255, 255, .9);\r\n  border-radius: 10px;\r\n}", "",{"version":3,"sources":["webpack://./src/popup/app.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;EACT,uBAAuB;AACzB;;AAEA;EACE,2BAA2B;EAC3B,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;;AAEA;;EAEE,aAAa;EACb,sBAAsB;EACtB,kBAAkB;EAClB,wBAAwB;EACxB,eAAe;AACjB;;AAEA;EACE,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,+BAA+B;EAC/B,gBAAgB;EAChB,WAAW;EACX,iBAAiB;EACjB,iBAAiB;EACjB,eAAe;EACf,4BAA4B;AAC9B;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,+BAA+B;EAC/B,gBAAgB;EAChB,WAAW;EACX,iBAAiB;AACnB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,kBAAkB;AACpB;AACA;EACE,mCAAmC;EACnC,mBAAmB;AACrB","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  padding: 0;\r\n  margin: 0;\r\n  scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n  background: var(--color-bg);\r\n  width: 300px;\r\n  height: 100%;\r\n}\r\n\r\n.bookmarks-app {\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 10px 10px;\r\n}\r\n\r\n.bookmarks-app__content {\r\n  \r\n  display: flex;\r\n  flex-direction: column;\r\n  overflow-y: hidden;\r\n  /* overflow-y: scroll; */\r\n  margin-top: 5px;\r\n}\r\n\r\n.small {\r\n  overflow-y: scroll;\r\n  max-height: 190px;\r\n}\r\n\r\n.bookmarks-app__messages {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.8rem;\r\n  padding: 5px 15px;\r\n  margin-top: 5px;\r\n  background: rgba(45,54,73,1);\r\n}\r\n\r\n.bookmarks-app__title {\r\n  display: flex;\r\n}\r\n\r\n.bookmarks-app__title-h1 {\r\n  font-family: var(--font-family);\r\n  font-weight: 500;\r\n  color: #fff;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  width: 0.8em;\r\n}\r\n \r\n::-webkit-scrollbar-track {\r\n  border-radius: 5px;\r\n}\r\n::-webkit-scrollbar-thumb {\r\n  background: rgba(255, 255, 255, .9);\r\n  border-radius: 10px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -47,7 +47,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".bookmarks-contaier {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 5px 0;\r\n  background: rgba(45,54,73,1);\r\n  height: 30px;\r\n}\r\n.bookmarks-contaier__content {\r\n  flex: 2;\r\n  padding: 10px 5px; \r\n}\r\n\r\np {\r\n  font-weight: 400;\r\n  font-family: var(--font-family);\r\n  font-size: 0.8rem;\r\n  margin-right: 10px;\r\n  color: var(--font-color);\r\n}\r\n\r\n.bookmarks-contaier__buttons {\r\n  height: 100%;\r\n  display: flex;\r\n  background-color: #fff;\r\n} \r\n\r\n.bookmarks-contaier__buttons button {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 0 5px;\r\n  cursor: pointer;\r\n  border: none;\r\n  background-color: transparent; \r\n}\r\n\r\n.delete-icon {\r\n  color: #941B10\r\n}\r\n.delete-icon :hover {\r\n  color: #CB2415 \r\n}\r\n\r\n.back-icon {\r\n  color:#386480\r\n}\r\n.back-icon :hover {\r\n  color:#457b9d\r\n}", "",{"version":3,"sources":["webpack://./src/popup/bookmark.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,aAAa;EACb,4BAA4B;EAC5B,YAAY;AACd;AACA;EACE,OAAO;EACP,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,+BAA+B;EAC/B,iBAAiB;EACjB,kBAAkB;EAClB,wBAAwB;AAC1B;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,eAAe;EACf,YAAY;EACZ,6BAA6B;AAC/B;;AAEA;EACE;AACF;AACA;EACE;AACF;;AAEA;EACE;AACF;AACA;EACE;AACF","sourcesContent":[".bookmarks-contaier {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 5px 0;\r\n  background: rgba(45,54,73,1);\r\n  height: 30px;\r\n}\r\n.bookmarks-contaier__content {\r\n  flex: 2;\r\n  padding: 10px 5px; \r\n}\r\n\r\np {\r\n  font-weight: 400;\r\n  font-family: var(--font-family);\r\n  font-size: 0.8rem;\r\n  margin-right: 10px;\r\n  color: var(--font-color);\r\n}\r\n\r\n.bookmarks-contaier__buttons {\r\n  height: 100%;\r\n  display: flex;\r\n  background-color: #fff;\r\n} \r\n\r\n.bookmarks-contaier__buttons button {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 0 5px;\r\n  cursor: pointer;\r\n  border: none;\r\n  background-color: transparent; \r\n}\r\n\r\n.delete-icon {\r\n  color: #941B10\r\n}\r\n.delete-icon :hover {\r\n  color: #CB2415 \r\n}\r\n\r\n.back-icon {\r\n  color:#386480\r\n}\r\n.back-icon :hover {\r\n  color:#457b9d\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".bookmarks-contaier {\r\n  display: flex;\r\n  align-items: center;\r\n  margin-top: 5px;\r\n  margin-left: 5px;\r\n  margin-right: 10px;\r\n  margin-left: 0;\r\n  background: rgba(45,54,73,1);\r\n  height: 30px;\r\n}\r\n.bookmarks-contaier__content {\r\n  flex: 2;\r\n  padding: 10px 5px; \r\n}\r\n\r\np {\r\n  font-weight: 400;\r\n  font-family: var(--font-family);\r\n  font-size: 0.8rem;\r\n  margin-right: 10px;\r\n  color: var(--font-color);\r\n}\r\n\r\n.bookmarks-contaier__buttons {\r\n  height: 100%;\r\n  display: flex;\r\n  background-color: rgba(255, 255, 255, .9);\r\n} \r\n\r\n.bookmarks-contaier__buttons button {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 0 5px;\r\n  cursor: pointer;\r\n  border: none;\r\n  background-color: transparent; \r\n}\r\n\r\n.delete-icon {\r\n  color: #941B10\r\n}\r\n.delete-icon :hover {\r\n  color: #CB2415 \r\n}\r\n\r\n.back-icon {\r\n  color:#386480\r\n}\r\n.back-icon :hover {\r\n  color:#457b9d\r\n}", "",{"version":3,"sources":["webpack://./src/popup/bookmark.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,cAAc;EACd,4BAA4B;EAC5B,YAAY;AACd;AACA;EACE,OAAO;EACP,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,+BAA+B;EAC/B,iBAAiB;EACjB,kBAAkB;EAClB,wBAAwB;AAC1B;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,yCAAyC;AAC3C;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,eAAe;EACf,YAAY;EACZ,6BAA6B;AAC/B;;AAEA;EACE;AACF;AACA;EACE;AACF;;AAEA;EACE;AACF;AACA;EACE;AACF","sourcesContent":[".bookmarks-contaier {\r\n  display: flex;\r\n  align-items: center;\r\n  margin-top: 5px;\r\n  margin-left: 5px;\r\n  margin-right: 10px;\r\n  margin-left: 0;\r\n  background: rgba(45,54,73,1);\r\n  height: 30px;\r\n}\r\n.bookmarks-contaier__content {\r\n  flex: 2;\r\n  padding: 10px 5px; \r\n}\r\n\r\np {\r\n  font-weight: 400;\r\n  font-family: var(--font-family);\r\n  font-size: 0.8rem;\r\n  margin-right: 10px;\r\n  color: var(--font-color);\r\n}\r\n\r\n.bookmarks-contaier__buttons {\r\n  height: 100%;\r\n  display: flex;\r\n  background-color: rgba(255, 255, 255, .9);\r\n} \r\n\r\n.bookmarks-contaier__buttons button {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 0 5px;\r\n  cursor: pointer;\r\n  border: none;\r\n  background-color: transparent; \r\n}\r\n\r\n.delete-icon {\r\n  color: #941B10\r\n}\r\n.delete-icon :hover {\r\n  color: #CB2415 \r\n}\r\n\r\n.back-icon {\r\n  color:#386480\r\n}\r\n.back-icon :hover {\r\n  color:#457b9d\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -297,6 +297,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Bookmark__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Bookmark */ "./src/popup/Bookmark.tsx");
 /* harmony import */ var _content_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../content/utils */ "./src/content/utils.ts");
+/* harmony import */ var react_resize_detector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-resize-detector */ "./node_modules/react-resize-detector/build/index.esm.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
 /* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.css */ "./src/popup/app.css");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -311,22 +313,36 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-const Bookmarks = ({ bookmarks, setBookmarks, videoTitle }) => (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
-    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: 'bookmarks-app__title' },
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", { className: 'bookmarks-app__title-h1' },
-            " ",
-            videoTitle,
-            " ")),
-    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: 'bookmarks-app__content' }, bookmarks.length > 0 ?
-        (bookmarks.map((bookmark) => (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Bookmark__WEBPACK_IMPORTED_MODULE_1__["default"], { key: bookmark.id, bookmark: bookmark, setBookmarks: setBookmarks })))) :
-        (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: 'bookmarks-app__messages' }, "Add your bookmarks \uD83D\uDCD1\uD83D\uDE04. ")))));
+
+
+const Bookmarks = ({ bookmarks, setBookmarks, videoTitle }) => {
+    const { width, height, ref } = (0,react_resize_detector__WEBPACK_IMPORTED_MODULE_4__.useResizeDetector)();
+    const handleOnResize = () => {
+        const bookmarksContent = ref.current;
+        if (bookmarksContent.clientHeight >= 190) {
+            bookmarksContent.classList.add('small');
+        }
+        else {
+            bookmarksContent.classList.remove('small');
+        }
+    };
+    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: 'bookmarks-app__title' },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", { className: 'bookmarks-app__title-h1' },
+                " ",
+                videoTitle,
+                " ")),
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_resize_detector__WEBPACK_IMPORTED_MODULE_4__["default"], { handleWidth: false, handleHeight: true, onResize: handleOnResize },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { ref: ref, className: 'bookmarks-app__content' }, bookmarks.length > 0 ?
+                (bookmarks.map((bookmark) => (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Bookmark__WEBPACK_IMPORTED_MODULE_1__["default"], { key: (0,uuid__WEBPACK_IMPORTED_MODULE_5__["default"])(), bookmark: bookmark, setBookmarks: setBookmarks })))) :
+                (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: 'bookmarks-app__messages' }, "Add your bookmarks \uD83D\uDCD1\uD83D\uDE04. "))))));
+};
 const App = () => {
     const [bookmarks, setBookmarks] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
     const [isYoutube, setIsYoutube] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
     const [title, setTitle] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
     const truncateTitle = (title) => {
         const length = 59;
-        title = title.substring(3, title.length);
         if (title.length > length) {
             return title.substring(0, length) + '...';
         }
@@ -535,6 +551,18 @@ root.render(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEB
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -623,7 +651,7 @@ root.render(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEB
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_react-dom_client_js","vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-d9119f"], () => (__webpack_require__("./src/popup/Popup.tsx")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_react-dom_client_js","vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-033ef7"], () => (__webpack_require__("./src/popup/Popup.tsx")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

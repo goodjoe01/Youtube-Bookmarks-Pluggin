@@ -18,9 +18,17 @@ body {
 }
 
 .bookmarks-app__content {
-  max-height: 190px;
+  
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
+  /* overflow-y: scroll; */
+  margin-top: 5px;
+}
+
+.small {
+  overflow-y: scroll;
+  max-height: 190px;
 }
 
 .bookmarks-app__messages {
@@ -42,4 +50,16 @@ body {
   font-weight: 500;
   color: #fff;
   font-size: 0.9rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+}
+ 
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .9);
+  border-radius: 10px;
 }
