@@ -1,6 +1,7 @@
 {
   "name": "Youtube Bookmarks",
   "version": "0.1.0",
+  "autor": "Goodjoe",
   "description": "Saving timestamps in YT videos",
   "permissions": ["storage", "tabs"],
   "host_permissions": ["https://*.youtube.com/*"],
@@ -16,6 +17,11 @@
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png" 
   },
   "web_accessible_resources":[
     {
