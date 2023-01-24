@@ -1,20 +1,2 @@
-/******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
-/*!**************************************!*\
-  !*** ./src/background/background.ts ***!
-  \**************************************/
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (tab.url && tab.url.includes('youtube.com/watch')) {
-        const queryParameters = tab.url.split('?')[1];
-        const urlParameters = new URLSearchParams(queryParameters);
-        const currentVideoId = urlParameters.get('v');
-        chrome.tabs.sendMessage(tabId, {
-            type: 'NEW_VIDEO',
-            videoId: currentVideoId
-        });
-    }
-});
-
-/******/ })()
-;
+chrome.tabs.onUpdated.addListener(((e,s,t)=>{if(t.url&&t.url.includes("youtube.com/watch")){const s=t.url.split("?")[1],a=new URLSearchParams(s).get("v");chrome.tabs.sendMessage(e,{type:"NEW_VIDEO",videoId:a})}}));
 //# sourceMappingURL=background.js.map

@@ -16,11 +16,7 @@ const getBookmarks = async () => {
 }
 
 const checkIfBookmarkExist = async (id: string) => {
-  const currentBookmarks = await getBookmarks();
-  console.log(currentBookmarks);
-  console.log('ID', id)
-  const exists = currentBookmarks.find((bookmark)=>{bookmark.id===id});
-  console.log('exists: ', exists)
+  const exists = currentVideoBookmarks.find((bookmark)=>bookmark.id===id);
   if(exists) return true
   else return false;
 }
@@ -28,7 +24,6 @@ const checkIfBookmarkExist = async (id: string) => {
 const addBookmarkEventHandler = async () => {
   const currentVideoTime = youtubeVideo.currentTime;
   const existe = await checkIfBookmarkExist(currentVideoTime.toString())
-  console.log('EXISTE EL BOOKMARK?: ', existe);
 
   if (existe===false){
     const newBookmark: TBookmark = {
@@ -88,11 +83,7 @@ const messagesFromBackground = async (msg: DOMMessage, sender: chrome.runtime.Me
 
   } else if (msg.type === 'DELETE') {
      
-    console.log('ARREGLO ANTES DEL FILTRO: ',currentVideoBookmarks)
-
     currentVideoBookmarks = currentVideoBookmarks.filter((bookmark)=>bookmark.id != msg.bookmarkId)
-
-    console.log('ARREGLO DSPUES DEL FILTRO: ',currentVideoBookmarks)
     
     chrome.storage.sync.set({ [currentVideo]: JSON.stringify(currentVideoBookmarks) });
 
@@ -101,8 +92,6 @@ const messagesFromBackground = async (msg: DOMMessage, sender: chrome.runtime.Me
   }
 
 }
-
-
 
 chrome.runtime.onMessage.addListener(messagesFromBackground);
 

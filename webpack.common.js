@@ -40,11 +40,6 @@ module.exports = {
       'popup',
       'options'
     ])
-/*     new HtmlPlugin({
-      title: 'React js popup',
-      filename: 'popup.html',
-      chunks: ['popup']
-    }) */
   ],
   resolve: {
     extensions: ['.tsx', '.js', '.ts']

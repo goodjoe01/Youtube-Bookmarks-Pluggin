@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import { TBookmark } from '../content/types'
 import Bookmark from './Bookmark'
 import { getActiveTabURL } from '../content/utils'
@@ -14,7 +14,7 @@ type props = {
 }
 
 const Bookmarks = ({bookmarks, setBookmarks, videoTitle}: props) =>{
-  const {width, height, ref} = useResizeDetector();
+  const {ref} = useResizeDetector();
 
   const handleOnResize = () => {
     const bookmarksContent = ref.current;    
